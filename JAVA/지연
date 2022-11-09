@@ -1,0 +1,10 @@
+코드 지연 방법
+-------------
+
+```
+Thread.sleep([millisecond]]);
+```
+
+```
+TimeUnit.SECONDS.sleep([second]]);
+```

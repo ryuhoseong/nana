@@ -1,0 +1,16 @@
+난수 생성 방법
+-------------
+
+```
+(int) ((Math.random() * (max - min)) + min)
+```
+
+```
+Random random = new Random();
+random.nextInt(max - min) + min;
+```
+
+```
+Random random = new Random();
+random.ints(min, max).findFirst().getAsInt();
+```
