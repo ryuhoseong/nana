@@ -1,10 +1,10 @@
-## vertical text block
+### vertical text block
 `Alt + Shift + Insert`
 `Shift + Arrows`
 
-## text Block(Code Selection)
+### text Block(Code Selection)
 `Ctrl + w`
 
-## markdown preview
+### markdown preview
 `Ctrl + Shift + v`
 
