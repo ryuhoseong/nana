@@ -5,6 +5,5 @@
 ### text Block(Code Selection)
 `Ctrl + w`
 
-### markdown preview
-`Ctrl + Shift + v`
-
+### 자동변수
+`Ctrl + Alt + V`
