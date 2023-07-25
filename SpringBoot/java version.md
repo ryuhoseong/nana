@@ -1,4 +1,4 @@
-## runtime java version 확인
+### runtime java version 확인
 ```
 String[] versionElements = System.getProperty("java.version").split("\\.");
 int discard = Integer.parseInt(versionElements[0]);

@@ -18,3 +18,9 @@
 
 ### sequence 목록
     select * from information_schema.sequences
+
+### index 확인
+    select * from pg_indexs where tablename not like 'pg%'
+
+### empty column 확인
+    where ([column] = '') is not false
