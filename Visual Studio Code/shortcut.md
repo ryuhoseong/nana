@@ -1,3 +1,6 @@
+### 단축키 확인
+`Ctrl + Shift + p` -> short cut
+
 ### markdown preview
 `Ctrl + Shift + v`
 
@@ -6,3 +9,6 @@
 
 ### 변수 일괄변경
 `Ctrl + F2`
+
+### 대문자
+`Ctrl + Alt + u`

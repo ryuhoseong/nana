@@ -90,3 +90,11 @@ when(method.invoke(a)).thenReturn("");
 
 a.d();
 ```
+
+### exception test
+```
+assertThrows(IllegalArgumentException.class
+                , () -> {
+                    [test 대상 method 호출]
+                });
+```
