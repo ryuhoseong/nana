@@ -16,3 +16,9 @@
 
 ### 변수명 일괄 변경
 `Shift + F6`
+
+### multi cursor
+`Dolble Click Ctrl + 방향키`
+
+### method parameter hint
+`Ctrl + p`

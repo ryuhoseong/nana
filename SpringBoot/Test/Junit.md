@@ -1,10 +1,12 @@
 ### private method test
 #### Reflection
 ```
-Method method = ReadXmlStAXCursorParser.class.getDeclaredMethod("[method명]", [Parameter Type].class);
+Sample sample = new Sample;
+Class clazz = Class.forName([full path]);
+Method method = clazz.getDeclaredMethod("[method명]", [Parameter Type].class);
 method.setAccessible(true);
 
-method.invoke(readXmlStAXCursorParser, [parameter]);
+method.invoke(sample, [parameter]);
 ```
 
 #### ReflectionTestUtils
