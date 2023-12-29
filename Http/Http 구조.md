@@ -1,4 +1,1 @@
-## 구조
-    URI       : http:://www.sample.com/programer/java?framework=spring-boot&build=gradle
-    URL       : http:://www.sample.com/programer/java
-    PARAMETER : framework=spring-boot&build=gradle
+### https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web

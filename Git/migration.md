@@ -6,7 +6,7 @@
 
     git branch -a
 
-    git remote add origin [svn 주소]
+    git remote add origin [git 주소]
 
     git remote -v
 
