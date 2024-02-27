@@ -13,4 +13,3 @@
     git push origin master
 
     git branch [remote brach] [옮길 svn brach]
-    ex) git branch [remote brach] refs/remotes/origin/-
