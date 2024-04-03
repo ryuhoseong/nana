@@ -100,3 +100,6 @@ assertThrows(IllegalArgumentException.class
                     [test 대상 method 호출]
                 });
 ```
+
+### test code 에서 cannot find symbol 발생시
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.26' 추가

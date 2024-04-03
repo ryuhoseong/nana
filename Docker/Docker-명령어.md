@@ -22,20 +22,25 @@ CMD java -Dspring.profiles.active=[application] -jar [jar명]
     CMD: 컨테이너에서 실행한 명령어
 
 ### image 만들기
-    docker build -t [name] [경로]
-    ex) docker build -t [image명]] [경로]
+    docker build -t [name] [경로]    
 
 ### container 실행
-    ex) docker run -it -p [외부포트]:[내부포트] --name [container명] [image명] /bin/bash
+    docker run -it -p [외부포트]:[내부포트] --name [container명] [image명] /bin/bash
 
 ### container 실행 - mount volumn
-    ex) docker run -v $(pwd):[container 경로] -it --name [container명] [image명] /bin/bash   
+    docker run -v $(pwd):[container 경로] -it --name [container명] [image명] /bin/bash   
 
 ### container 실행 - host network
-    ex) docker run --network host --name [container명] [image명] /bin/bash
+    docker run --network host --name [container명] [image명] /bin/bash
 
 ### container 제약조건
-    ex) docker run -it -d --cpuset-cpus=1 --memory=2g -p [외부포트]:[내부포트] --name [container명] [image명] /bin/bash
+    docker run -it -d --cpuset-cpus=0 --memory=2g -p [외부포트]:[내부포트] --name [container명] [image명] /bin/bash
+### container 정보
+    https://docs.docker.com/config/containers/resource_constraints/
+    docker inspect <container_name> 
+    제약조건 확인 가능
+### docker container 상태
+    docker stats
 
 ### container 삭제
     docker rm [CONTAINER_ID]
