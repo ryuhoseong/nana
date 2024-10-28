@@ -8,3 +8,6 @@
 ### oom dump
     -XX:+HeapDumpOnOutOfMemoryError
     -XX:HeapDumpPath=/var/log
+
+### heap
+    -Xms[] -Xmx

@@ -3,24 +3,30 @@
 ```
 @RestControllerAdvice
 public class ControllerErrorHandler extends ResponseEntityExceptionHandler {
+
     public static final String BAD_REQUEST = "BAD_REQUEST";
+
     @Override
     public ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException exception,
                                                                HttpHeaders headers, HttpStatus status, WebRequest request) {
-        String genericMessage = "Unacceptable JSON " + exception.getMessage();
+
+        String genericMessage = "Unacceptable JSON " + ex.getMessage();
         String errorDetails = genericMessage;
 
-        if (exception.getCause() instanceof InvalidFormatException) {
-            InvalidFormatException ifx = (InvalidFormatException) exception.getCause();
-            if (ifx.getTargetType()!=null && ifx.getTargetType().isEnum()) {
+        if (ex.getCause() instanceof InvalidFormatException) {
+            InvalidFormatException invalidFormatException = (InvalidFormatException) ex.getCause();
+            if (invalidFormatException.getTargetType()!=null && invalidFormatException.getTargetType().isEnum()) {
                 errorDetails = String.format("Invalid enum value: '%s' for the field: '%s'. The value must be one of: %s.",
-                        ifx.getValue(), ifx.getPath().get(ifx.getPath().size()-1).getFieldName(), Arrays.toString(ifx.getTargetType().getEnumConstants()));
+                        invalidFormatException.getValue(),
+                        invalidFormatException.getPath().get(invalidFormatException.getPath().size()-1).getFieldName(),
+                        Arrays.toString(invalidFormatException.getTargetType().getEnumConstants()));
             }
         }
-        ErrorResponse errorResponse = new ErrorResponse();
-        errorResponse.setTitle(BAD_REQUEST);
-        errorResponse.setDetail(errorDetails);
-        return handleExceptionInternal(exception, errorResponse, headers, HttpStatus.BAD_REQUEST, request);
+
+        ApiResponse<String> response = new ApiResponse<>(status, "error", errorDetails);
+
+        return new ResponseEntity<>(response, status);
+
     }
 
 }
